@@ -22,8 +22,12 @@
 
 -(void) viewDidLoad {
     [super viewDidLoad];
-    
-    NSLog(@"%@", self.view.frameString);
+}
+
+-(void) viewDidAppear : (BOOL) animated {
+    NSLog(@"%@", self.blackView.frameString);
+    [self.blackView setBottom:568];
+    NSLog(@"%@", self.blackView.frameString);
 }
 
 @end

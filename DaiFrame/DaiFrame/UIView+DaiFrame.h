@@ -13,10 +13,22 @@
 //lazy
 @property (nonatomic, readonly) NSString *frameString;
 
-//from frame
+//frame
 @property (nonatomic, assign) CGFloat x;
 @property (nonatomic, assign) CGFloat y;
 @property (nonatomic, assign) CGFloat width;
 @property (nonatomic, assign) CGFloat height;
+
+//extend
+@property (nonatomic, assign) CGFloat top;
+@property (nonatomic, assign) CGFloat bottom;
+@property (nonatomic, assign) CGFloat left;
+@property (nonatomic, assign) CGFloat right;
+
+//position
+@property (nonatomic, assign) CGPoint leftTop;
+@property (nonatomic, assign) CGPoint leftBottom;
+@property (nonatomic, assign) CGPoint rightTop;
+@property (nonatomic, assign) CGPoint rightBottom;
 
 @end

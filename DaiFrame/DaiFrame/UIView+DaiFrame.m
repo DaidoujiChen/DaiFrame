@@ -12,6 +12,8 @@
 
 @dynamic frameString;
 @dynamic x, y, width, height;
+@dynamic top, bottom, left, right;
+@dynamic leftTop, leftBottom, rightTop, rightBottom;
 
 #pragma mark - lazy
 
@@ -19,7 +21,7 @@
     return NSStringFromCGRect(self.frame);
 }
 
-#pragma mark - from frame
+#pragma mark - frame
 
 -(void) setX : (CGFloat) x {
     CGRect newFrame = self.frame;
@@ -60,5 +62,90 @@
 -(CGFloat) height {
     return self.frame.size.height;
 }
+
+#pragma mark - extend
+
+-(void) setTop : (CGFloat) top {
+    [self setY:top];
+}
+
+-(CGFloat) top {
+    return self.y;
+}
+
+-(void) setBottom : (CGFloat) bottom {
+    CGRect newFrame = self.frame;
+    newFrame.origin.y = bottom - newFrame.size.height;
+    [self setFrame:newFrame];
+}
+
+-(CGFloat) bottom {
+    return self.y + self.height;
+}
+
+-(void) setLeft : (CGFloat) left {
+    [self setX:left];
+}
+
+-(CGFloat) left {
+    return self.x;
+}
+
+-(void) setRight : (CGFloat) right {
+    CGRect newFrame = self.frame;
+    newFrame.origin.x = right - newFrame.size.width;
+    [self setFrame:newFrame];
+}
+
+-(CGFloat) right {
+    return self.x + self.width;
+}
+
+#pragma mark - position
+
+-(void) setLeftTop : (CGPoint) leftTop {
+    CGRect newFrame = self.frame;
+    newFrame.origin.x = leftTop.x;
+    newFrame.origin.y = leftTop.y;
+    [self setFrame:newFrame];
+}
+
+-(CGPoint) leftTop {
+    return CGPointMake(self.left, self.top);
+}
+
+-(void) setLeftBottom : (CGPoint) leftBottom {
+    CGRect newFrame = self.frame;
+    newFrame.origin.x = leftBottom.x;
+    newFrame.origin.y = leftBottom.y - newFrame.size.height;
+    [self setFrame:newFrame];
+}
+
+-(CGPoint) leftBottom {
+    return CGPointMake(self.left, self.bottom);
+}
+
+-(void) setRightTop : (CGPoint) rightTop {
+    CGRect newFrame = self.frame;
+    newFrame.origin.x = rightTop.x - newFrame.size.width;
+    newFrame.origin.y = rightTop.y;
+    [self setFrame:newFrame];
+}
+
+-(CGPoint) rightTop {
+    return CGPointMake(self.right, self.top);
+}
+
+-(void) setRightBottom : (CGPoint) rightBottom {
+    CGRect newFrame = self.frame;
+    newFrame.origin.x = rightBottom.x - newFrame.size.width;
+    newFrame.origin.y = rightBottom.y - newFrame.size.height;
+    [self setFrame:newFrame];
+}
+
+-(CGPoint) rightBottom {
+    return CGPointMake(self.right, self.bottom);
+}
+
 
 @end
