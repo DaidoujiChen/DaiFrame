@@ -13,14 +13,15 @@
 		01FA8C361926045400776198 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 01FA8C341926045400776198 /* InfoPlist.strings */; };
 		01FA8C381926045400776198 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FA8C371926045400776198 /* main.m */; };
 		01FA8C3C1926045400776198 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FA8C3B1926045400776198 /* AppDelegate.m */; };
-		01FA8C3F1926045400776198 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01FA8C3D1926045400776198 /* Main.storyboard */; };
-		01FA8C421926045400776198 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FA8C411926045400776198 /* ViewController.m */; };
 		01FA8C441926045400776198 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01FA8C431926045400776198 /* Images.xcassets */; };
 		01FA8C4B1926045400776198 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01FA8C4A1926045400776198 /* XCTest.framework */; };
 		01FA8C4C1926045400776198 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01FA8C2B1926045400776198 /* Foundation.framework */; };
 		01FA8C4D1926045400776198 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01FA8C2F1926045400776198 /* UIKit.framework */; };
 		01FA8C551926045400776198 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 01FA8C531926045400776198 /* InfoPlist.strings */; };
 		01FA8C571926045400776198 /* DaiFrameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FA8C561926045400776198 /* DaiFrameTests.m */; };
+		01FA8C631926047C00776198 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FA8C611926047C00776198 /* MainViewController.m */; };
+		01FA8C641926047C00776198 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01FA8C621926047C00776198 /* MainViewController.xib */; };
+		01FA8C681926050E00776198 /* UIView+DaiFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FA8C671926050E00776198 /* UIView+DaiFrame.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,15 +45,17 @@
 		01FA8C391926045400776198 /* DaiFrame-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DaiFrame-Prefix.pch"; sourceTree = "<group>"; };
 		01FA8C3A1926045400776198 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		01FA8C3B1926045400776198 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		01FA8C3E1926045400776198 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		01FA8C401926045400776198 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		01FA8C411926045400776198 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		01FA8C431926045400776198 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		01FA8C491926045400776198 /* DaiFrameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DaiFrameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		01FA8C4A1926045400776198 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		01FA8C521926045400776198 /* DaiFrameTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DaiFrameTests-Info.plist"; sourceTree = "<group>"; };
 		01FA8C541926045400776198 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		01FA8C561926045400776198 /* DaiFrameTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DaiFrameTests.m; sourceTree = "<group>"; };
+		01FA8C601926047C00776198 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		01FA8C611926047C00776198 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		01FA8C621926047C00776198 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		01FA8C661926050E00776198 /* UIView+DaiFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+DaiFrame.h"; path = "DaiFrame/UIView+DaiFrame.h"; sourceTree = "<group>"; };
+		01FA8C671926050E00776198 /* UIView+DaiFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+DaiFrame.m"; path = "DaiFrame/UIView+DaiFrame.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,11 +115,12 @@
 		01FA8C311926045400776198 /* DaiFrame */ = {
 			isa = PBXGroup;
 			children = (
+				01FA8C65192604F400776198 /* DaiFrame */,
 				01FA8C3A1926045400776198 /* AppDelegate.h */,
 				01FA8C3B1926045400776198 /* AppDelegate.m */,
-				01FA8C3D1926045400776198 /* Main.storyboard */,
-				01FA8C401926045400776198 /* ViewController.h */,
-				01FA8C411926045400776198 /* ViewController.m */,
+				01FA8C601926047C00776198 /* MainViewController.h */,
+				01FA8C611926047C00776198 /* MainViewController.m */,
+				01FA8C621926047C00776198 /* MainViewController.xib */,
 				01FA8C431926045400776198 /* Images.xcassets */,
 				01FA8C321926045400776198 /* Supporting Files */,
 			);
@@ -150,6 +154,15 @@
 				01FA8C531926045400776198 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		01FA8C65192604F400776198 /* DaiFrame */ = {
+			isa = PBXGroup;
+			children = (
+				01FA8C661926050E00776198 /* UIView+DaiFrame.h */,
+				01FA8C671926050E00776198 /* UIView+DaiFrame.m */,
+			);
+			name = DaiFrame;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,8 +242,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				01FA8C441926045400776198 /* Images.xcassets in Resources */,
+				01FA8C641926047C00776198 /* MainViewController.xib in Resources */,
 				01FA8C361926045400776198 /* InfoPlist.strings in Resources */,
-				01FA8C3F1926045400776198 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,8 +262,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01FA8C421926045400776198 /* ViewController.m in Sources */,
 				01FA8C3C1926045400776198 /* AppDelegate.m in Sources */,
+				01FA8C681926050E00776198 /* UIView+DaiFrame.m in Sources */,
+				01FA8C631926047C00776198 /* MainViewController.m in Sources */,
 				01FA8C381926045400776198 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,14 +294,6 @@
 				01FA8C351926045400776198 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		01FA8C3D1926045400776198 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				01FA8C3E1926045400776198 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		01FA8C531926045400776198 /* InfoPlist.strings */ = {
