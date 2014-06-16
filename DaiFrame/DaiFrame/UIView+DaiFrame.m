@@ -11,7 +11,7 @@
 @implementation UIView (DaiFrame)
 
 @dynamic frameString;
-@dynamic x, y, width, height;
+@dynamic x, y, width, height, size, origin;
 @dynamic top, bottom, left, right;
 @dynamic leftTop, leftBottom, rightTop, rightBottom;
 
@@ -62,6 +62,27 @@
 -(CGFloat) height {
     return self.frame.size.height;
 }
+
+-(void) setSize : (CGSize) size {
+    CGRect newFrame = self.frame;
+    newFrame.size = size;
+    [self setFrame:newFrame];
+}
+
+-(CGSize) size {
+    return self.frame.size;
+}
+
+-(void) setOrigin : (CGPoint) origin {
+    CGRect newFrame = self.frame;
+    newFrame.origin = origin;
+    [self setFrame:newFrame];
+}
+
+-(CGPoint) origin {
+    return self.frame.origin;
+}
+
 
 #pragma mark - extend
 
