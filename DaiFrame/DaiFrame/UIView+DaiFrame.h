@@ -10,10 +10,13 @@
 
 @interface UIView (DaiFrame)
 
-//lazy
+#pragma mark - lazy
+
 @property (nonatomic, readonly) NSString *frameString;
 
-//frame
+
+#pragma mark - frame
+
 @property (nonatomic, assign) CGFloat x;
 @property (nonatomic, assign) CGFloat y;
 @property (nonatomic, assign) CGFloat width;
@@ -21,13 +24,17 @@
 @property (nonatomic, assign) CGSize size;
 @property (nonatomic, assign) CGPoint origin;
 
-//extend
+
+#pragma mark - extend
+
 @property (nonatomic, assign) CGFloat top;
 @property (nonatomic, assign) CGFloat bottom;
 @property (nonatomic, assign) CGFloat left;
 @property (nonatomic, assign) CGFloat right;
 
-//position
+
+#pragma mark - position
+
 @property (nonatomic, assign) CGPoint leftTop;
 @property (nonatomic, assign) CGPoint leftBottom;
 @property (nonatomic, assign) CGPoint rightTop;

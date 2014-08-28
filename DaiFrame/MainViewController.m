@@ -9,25 +9,17 @@
 #import "MainViewController.h"
 
 @interface MainViewController ()
-
 @end
 
 @implementation MainViewController
 
--(void) didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
-
 #pragma mark - life cycle
 
--(void) viewDidLoad {
-    [super viewDidLoad];
-}
-
--(void) viewDidAppear : (BOOL) animated {
-    NSLog(@"%@", self.blackView.frameString);
-    [self.blackView setBottom:568];
-    NSLog(@"%@", self.blackView.frameString);
+- (void)viewDidAppear:(BOOL)animated
+{
+	NSLog(@"%@", self.blackView.frameString);
+	self.blackView.bottom = 568.0f;
+	NSLog(@"%@", self.blackView.frameString);
 }
 
 @end

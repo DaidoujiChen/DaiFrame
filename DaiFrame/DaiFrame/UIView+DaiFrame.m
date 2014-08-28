@@ -17,156 +17,186 @@
 
 #pragma mark - lazy
 
--(NSString*) frameString {
-    return NSStringFromCGRect(self.frame);
+- (NSString *)frameString
+{
+	return NSStringFromCGRect(self.frame);
 }
+
 
 #pragma mark - frame
 
--(void) setX : (CGFloat) x {
-    CGRect newFrame = self.frame;
-    newFrame.origin.x = x;
-    [self setFrame:newFrame];
+- (void)setX:(CGFloat)x
+{
+	CGRect newFrame = self.frame;
+	newFrame.origin.x = x;
+    self.frame = newFrame;
 }
 
--(CGFloat) x {
-    return self.frame.origin.x;
+- (CGFloat)x
+{
+	return self.frame.origin.x;
 }
 
--(void) setY : (CGFloat) y {
-    CGRect newFrame = self.frame;
-    newFrame.origin.y = y;
-    [self setFrame:newFrame];
+- (void)setY:(CGFloat)y
+{
+	CGRect newFrame = self.frame;
+	newFrame.origin.y = y;
+    self.frame = newFrame;
 }
 
--(CGFloat) y {
-    return self.frame.origin.y;
+- (CGFloat)y
+{
+	return self.frame.origin.y;
 }
 
--(void) setWidth : (CGFloat) width {
-    CGRect newFrame = self.frame;
-    newFrame.size.width = width;
-    [self setFrame:newFrame];
+- (void)setWidth:(CGFloat)width
+{
+	CGRect newFrame = self.frame;
+	newFrame.size.width = width;
+    self.frame = newFrame;
 }
 
--(CGFloat) width {
-    return self.frame.size.width;
+- (CGFloat)width
+{
+	return self.frame.size.width;
 }
 
--(void) setHeight : (CGFloat) height {
-    CGRect newFrame = self.frame;
-    newFrame.size.height = height;
-    [self setFrame:newFrame];
+- (void)setHeight:(CGFloat)height
+{
+	CGRect newFrame = self.frame;
+	newFrame.size.height = height;
+    self.frame = newFrame;
 }
 
--(CGFloat) height {
-    return self.frame.size.height;
+- (CGFloat)height
+{
+	return self.frame.size.height;
 }
 
--(void) setSize : (CGSize) size {
-    CGRect newFrame = self.frame;
-    newFrame.size = size;
-    [self setFrame:newFrame];
+- (void)setSize:(CGSize)size
+{
+	CGRect newFrame = self.frame;
+	newFrame.size = size;
+    self.frame = newFrame;
 }
 
--(CGSize) size {
-    return self.frame.size;
+- (CGSize)size
+{
+	return self.frame.size;
 }
 
--(void) setOrigin : (CGPoint) origin {
-    CGRect newFrame = self.frame;
-    newFrame.origin = origin;
-    [self setFrame:newFrame];
+- (void)setOrigin:(CGPoint)origin
+{
+	CGRect newFrame = self.frame;
+	newFrame.origin = origin;
+    self.frame = newFrame;
 }
 
--(CGPoint) origin {
-    return self.frame.origin;
+- (CGPoint)origin
+{
+	return self.frame.origin;
 }
 
 
 #pragma mark - extend
 
--(void) setTop : (CGFloat) top {
-    [self setY:top];
+- (void)setTop:(CGFloat)top
+{
+    self.y = top;
 }
 
--(CGFloat) top {
-    return self.y;
+- (CGFloat)top
+{
+	return self.y;
 }
 
--(void) setBottom : (CGFloat) bottom {
-    CGRect newFrame = self.frame;
-    newFrame.origin.y = bottom - newFrame.size.height;
-    [self setFrame:newFrame];
+- (void)setBottom:(CGFloat)bottom
+{
+	CGRect newFrame = self.frame;
+	newFrame.origin.y = bottom - newFrame.size.height;
+    self.frame = newFrame;
 }
 
--(CGFloat) bottom {
-    return self.y + self.height;
+- (CGFloat)bottom
+{
+	return self.y + self.height;
 }
 
--(void) setLeft : (CGFloat) left {
-    [self setX:left];
+- (void)setLeft:(CGFloat)left
+{
+    self.x = left;
 }
 
--(CGFloat) left {
-    return self.x;
+- (CGFloat)left
+{
+	return self.x;
 }
 
--(void) setRight : (CGFloat) right {
-    CGRect newFrame = self.frame;
-    newFrame.origin.x = right - newFrame.size.width;
-    [self setFrame:newFrame];
+- (void)setRight:(CGFloat)right
+{
+	CGRect newFrame = self.frame;
+	newFrame.origin.x = right - newFrame.size.width;
+    self.frame = newFrame;
 }
 
--(CGFloat) right {
-    return self.x + self.width;
+- (CGFloat)right
+{
+	return self.x + self.width;
 }
+
 
 #pragma mark - position
 
--(void) setLeftTop : (CGPoint) leftTop {
-    CGRect newFrame = self.frame;
-    newFrame.origin.x = leftTop.x;
-    newFrame.origin.y = leftTop.y;
-    [self setFrame:newFrame];
+- (void)setLeftTop:(CGPoint)leftTop
+{
+	CGRect newFrame = self.frame;
+	newFrame.origin.x = leftTop.x;
+	newFrame.origin.y = leftTop.y;
+    self.frame = newFrame;
 }
 
--(CGPoint) leftTop {
-    return CGPointMake(self.left, self.top);
+- (CGPoint)leftTop
+{
+	return CGPointMake(self.left, self.top);
 }
 
--(void) setLeftBottom : (CGPoint) leftBottom {
-    CGRect newFrame = self.frame;
-    newFrame.origin.x = leftBottom.x;
-    newFrame.origin.y = leftBottom.y - newFrame.size.height;
-    [self setFrame:newFrame];
+- (void)setLeftBottom:(CGPoint)leftBottom
+{
+	CGRect newFrame = self.frame;
+	newFrame.origin.x = leftBottom.x;
+	newFrame.origin.y = leftBottom.y - newFrame.size.height;
+    self.frame = newFrame;
 }
 
--(CGPoint) leftBottom {
-    return CGPointMake(self.left, self.bottom);
+- (CGPoint)leftBottom
+{
+	return CGPointMake(self.left, self.bottom);
 }
 
--(void) setRightTop : (CGPoint) rightTop {
-    CGRect newFrame = self.frame;
-    newFrame.origin.x = rightTop.x - newFrame.size.width;
-    newFrame.origin.y = rightTop.y;
-    [self setFrame:newFrame];
+- (void)setRightTop:(CGPoint)rightTop
+{
+	CGRect newFrame = self.frame;
+	newFrame.origin.x = rightTop.x - newFrame.size.width;
+	newFrame.origin.y = rightTop.y;
+    self.frame = newFrame;
 }
 
--(CGPoint) rightTop {
-    return CGPointMake(self.right, self.top);
+- (CGPoint)rightTop
+{
+	return CGPointMake(self.right, self.top);
 }
 
--(void) setRightBottom : (CGPoint) rightBottom {
-    CGRect newFrame = self.frame;
-    newFrame.origin.x = rightBottom.x - newFrame.size.width;
-    newFrame.origin.y = rightBottom.y - newFrame.size.height;
-    [self setFrame:newFrame];
+- (void)setRightBottom:(CGPoint)rightBottom
+{
+	CGRect newFrame = self.frame;
+	newFrame.origin.x = rightBottom.x - newFrame.size.width;
+	newFrame.origin.y = rightBottom.y - newFrame.size.height;
+    self.frame = newFrame;
 }
 
--(CGPoint) rightBottom {
-    return CGPointMake(self.right, self.bottom);
+- (CGPoint)rightBottom
+{
+	return CGPointMake(self.right, self.bottom);
 }
-
 
 @end
